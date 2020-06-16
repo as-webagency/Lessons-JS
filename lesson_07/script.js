@@ -84,6 +84,13 @@ let appData = {
             return ( 'Что то пошло не так' );
         }
 
+    },
+    wholeAppData: function () {
+
+        for (let key in appData) {
+            console.log('Наша программа ' + key + ' включает в себя данные: ' + appData[key]);
+        }
+
     }
 };
 
@@ -92,6 +99,7 @@ appData.getExpensesMonth();
 appData.getBudget();
 appData.getTargetMonth();
 appData.getStatusIncome();
+appData.wholeAppData();
 
 
 console.log( 'Расходы за месяц: ' + appData.expensesMonth);
